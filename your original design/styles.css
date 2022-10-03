@@ -1,0 +1,132 @@
+/*start global rules*/
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-color: #ff0000;
+  --main-color-alt: #1787e0;
+  --main-transition: 0.3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --section-background: #ececec;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Times New Roman", Georgia, serif;
+  color: #333;
+  font-size: 14px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #333;
+}
+.container {
+  width: 1024px;
+  margin: auto;
+}
+
+.header {
+  background-color: #333;
+  color: #fefefe;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px #ddd;
+  -moz-box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0 10px #ddd;
+}
+.header .main-nav {
+  display: flex;
+}
+.header .main-nav > li:first-of-type a {
+  padding-left: 0;
+  margin-left: 0;
+}
+.header .main-nav > li > a {
+  height: 72px;
+  font-size: 120%;
+  padding: 0px 10px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  color: #fefefe;
+  margin: 0px 20px;
+  transition: var(--main-transition);
+  overflow: hidden;
+  border-bottom: 3px solid transparent;
+}
+.header .main-nav > li > a:hover,
+a.active {
+  left: 0;
+  border-bottom: 3px var(--main-color) solid !important;
+  transition: var(--main-transition);
+}
+/* landing page  */
+.landing {
+  margin-top: 50px;
+  text-transform: capitalize;
+}
+
+/* gallery */
+.gallery {
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+.gallery .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  gap: 40px;
+}
+.gallery-images {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  gap: 40px;
+}
+.gallery .box {
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+.gallery .box .image {
+  border: 1px solid #333;
+  height: 100%;
+}
+.gallery .box img {
+  width: 100%;
+  height: 100%;
+}
+.gallery .box p {
+  margin-top: 10px;
+}
+.gallery .box:hover p a {
+  text-decoration: underline;
+}
+/* news */
+aside {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  text-align-last: left;
+}
+
+aside > h2 {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+aside div {
+  margin-bottom: 50px;
+}
+aside div p {
+  margin-bottom: 10px;
+}
